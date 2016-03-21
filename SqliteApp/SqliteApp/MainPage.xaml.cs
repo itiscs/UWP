@@ -1,5 +1,6 @@
 ﻿using SQLite.Net;
 using SqliteApp.Models;
+using SqliteApp.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -72,6 +74,21 @@ namespace SqliteApp
                 conn.Delete(item);
             }
             ShowProducts();
+        }
+
+        private void lvProducts_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Frame.Navigate(typeof(ItemPage), e.ClickedItem);
+
+        }
+
+        private void btnToast_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var toastXML = ToastService.CreateToast();
+            var notifier = ToastNotificationManager.CreateToastNotifier();
+            var toast = new ToastNotification(toastXML);
+            notifier.Show(toast);
+
         }
     }
 }

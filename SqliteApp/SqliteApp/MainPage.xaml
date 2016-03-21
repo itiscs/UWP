@@ -14,13 +14,15 @@
             <AppBarButton x:Name="btnAdd" Icon="AddFriend" Label="appbarbutton" Tapped="btnAdd_Tapped"/>
             <AppBarButton x:Name="btnCreate" Icon="Clock" Label="appbarbutton" Tapped="btnCreate_Tapped"/>
             <AppBarButton x:Name="btnDelete" Icon="Delete" Label="appbarbutton" Tapped="btnDelete_Tapped"/>
+            <AppBarButton x:Name="btnToast" Icon="AttachCamera" Label="appbarbutton" Tapped="btnToast_Tapped"/>
+
         </CommandBar>
     </Page.TopAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="lvProducts" HorizontalAlignment="Left" Height="470" 
                   Margin="208,100,0,0" VerticalAlignment="Top" Width="748"
-                  SelectionMode="Multiple">
+                  IsItemClickEnabled="True" ItemClick="lvProducts_ItemClick" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                    <StackPanel Orientation="Horizontal">
