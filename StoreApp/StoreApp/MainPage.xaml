@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="StoreApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel HorizontalAlignment="Center" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="txtVersion" FontSize="30" Margin="0,10,0,10" />
+        <Button x:Name="btnBuyFull" FontSize="25" Content="Buy license" Tapped="btnBuyFull_Tapped" />
+        <TextBlock x:Name="txtProduct1" FontSize="30" Margin="0,10,0,10" />
+        <Button x:Name="btnBuyProduct1" FontSize="25" Content="Buy product 1" Tapped="btnBuyProduct1_Tapped" />
+        <TextBlock x:Name="txtProduct2" FontSize="30" Margin="0,10,0,10" />
+        <Button x:Name="btnBuyProduct2" FontSize="25" Content="Buy product 2" Tapped="btnBuyProduct2_Tapped" />
+
+    </StackPanel>
+</Page>
