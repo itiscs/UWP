@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Notifications;
+using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -43,6 +44,15 @@ namespace SqliteApp
             var updater = TileUpdateManager.CreateTileUpdaterForApplication();
             TileNotification notification = new TileNotification(tileXML);
             updater.Update(notification);
+        }
+
+        private async void btnSecTile_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            SecondaryTile secTile = new SecondaryTile("ProductPage", 
+                "Product page", prod.Id.ToString(), new Uri(this.BaseUri, "/Assets/Square150x150Logo.scale-200.png"), 
+                TileSize.Square150x150);
+            await secTile.RequestCreateAsync();
+
         }
     }
 }

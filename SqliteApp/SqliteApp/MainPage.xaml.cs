@@ -39,7 +39,7 @@ namespace SqliteApp
                 "Products.sqlite");
             conn = new SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(),
                 path);
-            ShowProducts();
+            //ShowProducts();
             
         }
 
