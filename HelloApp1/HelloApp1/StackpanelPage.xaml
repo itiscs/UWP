@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="HelloApp1.StackpanelPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="grd" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer HorizontalAlignment="Left" VerticalScrollBarVisibility="Visible" 
+                     Width="120" >
+            <StackPanel x:Name="stPanel" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top"
+                        Width="auto"  Orientation="Vertical">
+
+                <Ellipse Width="100" Height="100" Fill="Yellow" />
+
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="btn" Content="Button" Height="60" Width="150" Margin="439,99,0,561" Click="btn_Click"/>
+
+
+    </Grid>
+</Page>

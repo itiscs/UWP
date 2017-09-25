@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="HelloApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="txt1" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Hello, World!" VerticalAlignment="Center" FontSize="36"/>
+        <Button x:Name="btn1" Content="Кнопка" HorizontalAlignment="Center" 
+                Margin="0,200,0,0" VerticalAlignment="Center" Height="62" Width="184" Tapped="btn1_Tapped" Click="btn1_Click"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="548,275,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="42" Width="178"/>
+
+
+
+
+    </Grid>
+</Page>
